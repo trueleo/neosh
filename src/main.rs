@@ -14,18 +14,14 @@ fn main() -> Result<(), io::Error> {
             .margin(1)
             .constraints(
                 [
-                    Constraint::Percentage(10),
-                    Constraint::Percentage(80),
-                    Constraint::Percentage(10),
+                    Constraint::Percentage(100),
                 ]
                 .as_ref(),
             )
             .split(f.size());
-        let block = Block::default().title("Block").borders(Borders::ALL);
+        let block = Block::default().title("NeoSH").borders(Borders::ALL);
         let paragraph = Paragraph::new("Hello, NeoSH!").block(block);
         f.render_widget(paragraph, chunks[0]);
-        let block = Block::default().title("Block 2").borders(Borders::ALL);
-        f.render_widget(block, chunks[1]);
     })?;
     Ok(())
 }
