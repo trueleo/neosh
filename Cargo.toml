@@ -25,6 +25,12 @@ features = ["vendored", "luajit"]   # Build LuaJIT on `cargo build`
 version = "0.3.3"                   #
 features = ["fmt", "env-filter"]    #
 
+[dependencies.tui]
+version =  "0.16.0"                 # TUI crate
+default-features = false            #
+features = ["crossterm"]            # Use crossterm as backend
+
+
 [profile.optimized]                 # Size optimizations that will hurt build speed
 inherits = "release"                # Which profile we inherit
 opt-level = "z"                     # Optimize for size
