@@ -1,5 +1,7 @@
 //! All built-in commands available in neosh
 
+// Commented until better future
+/*
 use crate::log::utils::command;
 use tracing::error;
 
@@ -57,3 +59,4 @@ pub fn echo(editor: &mut EEditor, line: &str, args: SplitWhitespace) {
 
     println!("{}", { args.collect::<Vec<&str>>().join(" ") })
 }
+*/
